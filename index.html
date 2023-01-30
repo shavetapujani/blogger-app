@@ -37,10 +37,23 @@
               <a class="menu-nav__link" href="#!">Home</a>
             </li>
             <li class="menu-nav__item">
-              <a class="menu-nav__link" href="#!">Dashboard</a>
+              <a
+                class="menu-nav__link"
+                href="#!"
+                onclick="(function(){
+                alert('Dashboard');                
+            })();
+            return false;")"
+                >Dashboard</a
+              >
             </li>
             <li class="menu-nav__item">
-              <a class="menu-nav__link" href="#!">Logout</a>
+              <a class="menu-nav__link" href="#!"
+              onclick="(function(){
+                alert('Logout');                
+                })();
+                return false;")"
+              >Logout</a>
             </li>
           </ul>
         </nav>
@@ -170,19 +183,6 @@
               consectetur, adipisicing elit. Itaque non molestias
             </p>
           </figure>
-          <!-- <figure class="article__user">
-            <img class="profile-image" src="./img/julie.jpg" alt="No image" />
-            <div class="user-details">
-              <span class="name">Jennifer </span>
-              <span class="id">@jennifer</span>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur, voluptatum! Illum sit minus similique, veritatis
-              perferendis commodi alias rem,Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Itaque non molestias
-            </p>
-          </figure> -->
           <figure class="article__user">
             <img class="profile-image" src="./img/julie.jpg" alt="No image" />
             <div class="user-details">
