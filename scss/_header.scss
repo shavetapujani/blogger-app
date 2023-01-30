@@ -10,6 +10,12 @@
   align-items: center;
 
   .header-logo {
+    width: 2rem;
+    /*Logo*/
+    &:hover,
+    &:active {
+      cursor: pointer;
+    }
     img {
       transform: scale(1.1);
       transition: all 0.2s;
@@ -17,13 +23,8 @@
       width: 2rem;
       height: 2rem;
     }
-    &:hover,
-    &:active {
-      cursor: pointer;
-    }
-    /*Logo*/
   }
-  /* MOBILE */
+  /* MOBILE navigation*/
   .btn-mobile-nav {
     border: none;
     background: none;

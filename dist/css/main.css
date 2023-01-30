@@ -26,6 +26,7 @@ body {
   align-self: flex-start;
 }
 
+/*---- Media Section ----*/
 .header {
   background-color: #002570;
   padding: 0.4rem 1.6rem;
@@ -43,11 +44,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* MOBILE */
+  /* MOBILE navigation*/
   /*Navigation CSS */
 }
 .header .header-logo {
+  width: 2rem;
   /*Logo*/
+}
+.header .header-logo:hover, .header .header-logo:active {
+  cursor: pointer;
 }
 .header .header-logo img {
   -webkit-transform: scale(1.1);
@@ -57,9 +62,6 @@ body {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-}
-.header .header-logo:hover, .header .header-logo:active {
-  cursor: pointer;
 }
 .header .btn-mobile-nav {
   border: none;
@@ -211,6 +213,7 @@ body {
   font-weight: 400;
   font-size: 0.8rem;
   color: #999;
+  text-transform: lowercase;
 }
 .section-profile .section .section__tweet .tweet__details,
 .popup-overlay .section .section__tweet .tweet__details {
@@ -297,7 +300,8 @@ body {
           flex-direction: column;
   gap: 1rem;
   /*---- Start Follow Section ----*/
-  /*---- Start Follow Section ----*/
+  /* ---- End Follow Section ----*/
+  /*---- Start advertisement Section ----*/
 }
 .aside .aside__follow .follow-heading {
   font-size: 1.2rem;
@@ -350,6 +354,7 @@ body {
   font-weight: 400;
   font-size: 0.8rem;
   color: #999;
+  text-transform: lowercase;
 }
 .aside .aside__follow .follow .follow-user button {
   color: #159fdf;
@@ -440,12 +445,14 @@ body {
   }
 }
 
+/*--- End Advertisement Section ---*/
 .article {
   height: auto;
   background-color: white;
   -webkit-box-shadow: 5px 5px 10px #002570;
           box-shadow: 5px 5px 10px #002570;
   border-radius: 0.4rem;
+  /* Article section CSS*/
 }
 .article .article__user {
   display: grid;
@@ -485,11 +492,13 @@ body {
   font-weight: 400;
   font-size: 0.8rem;
   color: #999;
+  text-transform: lowercase;
 }
 .article .article__user .date {
   font-weight: 400;
   font-size: 0.8rem;
   color: #999;
+  text-transform: lowercase;
 }
 .article .text-msg {
   line-height: 1.2rem;
@@ -510,6 +519,7 @@ body {
           justify-content: space-evenly;
   color: #a7def7;
   padding: 1rem 0.4rem 0.8rem 0.4rem;
+  gap: 1rem;
 }
 .footer .logo-col {
   display: grid;
@@ -563,11 +573,11 @@ body {
 }
 
 @media (max-width: 84em) {
-  .article .text-msg {
-    font-size: 1rem;
-  }
   .main {
     grid-template-columns: 21fr 61fr 18fr;
+  }
+  .main .article .text-msg {
+    font-size: 1rem;
   }
   .popup-overlay,
 .popup-overlay:target {
@@ -638,6 +648,14 @@ body {
   }
   .main .aside .aside__ad {
     z-index: -1;
+  }
+  .main .article .article__user .user-details .id,
+.main .article .article__user .user-details .name {
+    font-size: 1.2rem;
+  }
+  .main .article .article__user .text-msg {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
   }
   .header {
     position: relative;
@@ -747,7 +765,7 @@ body {
   }
   .main .article .article__user .text-msg {
     font-size: 1.2rem;
-    line-height: 1.6rem;
+    line-height: 1.2rem;
   }
   .main .aside {
     display: -webkit-box;

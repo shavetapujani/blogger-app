@@ -4,6 +4,7 @@
   box-shadow: 5px 5px 10px $header-footer-color;
   border-radius: 0.4rem;
 
+  /* Article section CSS*/
   #{&}__user {
     display: grid;
     grid-template-columns: 3rem auto;

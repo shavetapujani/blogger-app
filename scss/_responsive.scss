@@ -1,13 +1,13 @@
 @include media-lg {
-  .article {
-    .text-msg {
-      font-size: 1rem;
+  .main {
+    grid-template-columns: 21fr 61fr 18fr;
+    .article {
+      .text-msg {
+        font-size: 1rem;
+      }
     }
   }
 
-  .main {
-    grid-template-columns: 21fr 61fr 18fr;
-  }
   .popup-overlay,
   .popup-overlay:target {
     visibility: hidden;
@@ -16,9 +16,6 @@
 }
 
 @include media-md {
-  // .container {
-  //   background-color: green;
-  // }
   .section-profile {
     height: 100%;
     .section {
@@ -72,12 +69,24 @@
         z-index: -1;
       }
     }
+    .article {
+      .article__user {
+        .user-details {
+          .id,
+          .name {
+            font-size: 1.2rem;
+          }
+        }
+
+        .text-msg {
+          font-size: 1.2rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
   }
 
   .header {
-    // .container {
-    //   background-color: yellow;
-    // }
     position: relative;
     .nav {
       background-color: rgba(255, 255, 255, 0.97);
@@ -172,7 +181,7 @@
 
         .text-msg {
           font-size: 1.2rem;
-          line-height: 1.6rem;
+          line-height: 1.2rem;
         }
       }
     }
