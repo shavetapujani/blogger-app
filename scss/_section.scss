@@ -1,0 +1,130 @@
+.section-profile {
+  height: 16rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+
+  .section {
+    height: 100%;
+    border-radius: 0.4rem;
+  }
+
+  .section-profile-img {
+    align-items: center;
+    display: none;
+    .profile-img {
+      display: none;
+      @include user-image(2.4rem);
+    }
+  }
+}
+.section-profile,
+.popup-overlay {
+  .section {
+    @include displayflex(column);
+    position: relative;
+
+    .profile-name {
+      height: 40%;
+      background-color: #112a46;
+      color: white;
+      text-align: center;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+
+      p {
+        padding-top: 2.4rem;
+      }
+    }
+    .section__tweet {
+      img {
+        @include user-image(4.8rem);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(20%, -80%);
+        transition: all 0.3;
+        &:hover {
+          transform: translate(20%, -80%) scale(1.1);
+        }
+      }
+      .name,
+      .id {
+        padding-left: 36%;
+      }
+      .name {
+        @include displayusername;
+        padding-top: 0.4rem;
+        transition: all 0.3s;
+      }
+
+      .name:hover,
+      .name:active {
+        transform: scale(1.2);
+      }
+
+      .id {
+        @include lightentext;
+      }
+
+      .tweet__details {
+        padding: 2rem 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        justify-items: center;
+
+        .tweet-value {
+          color: #159fdf;
+          text-decoration: none;
+          font-weight: 400;
+          transition: all 0.3s;
+        }
+
+        .tweet-value:hover,
+        .tweet-value:active {
+          transform: scale(1.2);
+        }
+
+        .tweet-text {
+          color: #9c9c9c;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  @include displayflex(row);
+  align-items: center;
+  justify-content: center;
+
+  .section {
+    background-color: #fff;
+    height: 14rem;
+  }
+  .close {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    transition: all 200ms;
+    a {
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+
+      &:hover {
+        color: #159fdf;
+      }
+    }
+  }
+}

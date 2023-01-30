@@ -1,0 +1,53 @@
+.footer {
+  @include displayflex(row);
+  background-color: $header-footer-color;
+  justify-content: space-evenly;
+  color: $secondary-color;
+  padding: 1rem 0.4rem 0.8rem 0.4rem;
+
+  .logo-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    justify-items: center;
+
+    .footer-logo {
+      justify-self: end;
+      padding-right: 1rem;
+    }
+    .footer-logo img {
+      height: 2.4rem;
+      display: inline-block;
+    }
+  }
+
+  .social-links {
+    list-style: none;
+    @include displayflex(row);
+    gap: 0.4rem;
+    .social-icon {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  .social-icon,
+  .contact-link {
+    color: $secondary-color;
+  }
+
+  .contact-col {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.8rem;
+
+    .contacts {
+      @include displayflex(column);
+      gap: 0.4rem;
+    }
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,80 @@
+.header {
+  background-color: $header-footer-color;
+  padding: 0.4rem 1.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  @include displayflex(row);
+  gap: 1rem;
+  align-items: center;
+
+  .header-logo {
+    img {
+      transform: scale(1.1);
+      transition: all 0.2s;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+    }
+    &:hover,
+    &:active {
+      cursor: pointer;
+    }
+    /*Logo*/
+  }
+  /* MOBILE */
+  .btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+    .icon-mobile-nav {
+      height: 2.4rem;
+      width: 2.4rem;
+      color: #a7def7;
+
+      &[name="close-outline"] {
+        display: none;
+      }
+    }
+  }
+
+  /*Navigation CSS */
+  .nav {
+    width: 100%;
+
+    .menu-nav {
+      @include displayflex(row);
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      &__item {
+        background-color: $secondary-color;
+        display: inline-block;
+        padding: 0.4rem 1.2rem;
+        border-radius: 0.4rem;
+        @include transition-ease;
+
+        &:hover,
+        &:active {
+          background-color: #def2fc;
+          border: 3px solid $secondary-color;
+        }
+
+        &:last-child {
+          align-self: flex-end;
+          margin-left: auto;
+        }
+      }
+
+      &__link:link {
+        text-decoration: none;
+        color: #101010;
+        font-family: $font-family;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}

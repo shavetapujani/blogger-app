@@ -1,0 +1,89 @@
+$primary-color: #c8eafa;
+$header-footer-color: #002570;
+$secondary-color: #a7def7;
+$font-family: sans-serif;
+$font-weight-bold: 700;
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $primary-color;
+  font-family: $font-family;
+  line-height: 1rem;
+  overflow-x: hidden;
+}
+
+@mixin displayflex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin user-image($radius: 2.4rem) {
+  height: $radius;
+  width: $radius;
+  border-radius: 50%;
+  border: 3px solid #fdf2e9;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 21fr 61fr 18fr;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+  max-width: 100rem;
+  align-self: flex-start;
+}
+
+@mixin displayusername($isunderline: true) {
+  @if $isunderline==true {
+    text-decoration: underline;
+  } @else {
+    text-decoration: none;
+  }
+  font-weight: $font-weight-bold;
+  font-size: 0.8rem;
+}
+
+@mixin lightentext() {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+@mixin media-lg {
+  @media (max-width: 84em) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media (max-width: 75em) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (max-width: 59em) {
+    @content;
+  }
+}
+
+//Below 704px
+@mixin media-xsm {
+  @media (max-width: 44em) {
+    @content;
+  }
+}

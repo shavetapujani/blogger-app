@@ -1,0 +1,14 @@
+@import "./config";
+@import "./header";
+@import "./section";
+@import "./aside";
+@import "./article";
+@import "./footer";
+@import "./responsive";
+
+.container {
+  @include displayflex(column);
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 100vh;
+}
