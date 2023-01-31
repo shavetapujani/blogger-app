@@ -1,10 +1,13 @@
 .footer {
-  @include displayflex(row);
+  @include displayFlex(row);
   background-color: $header-footer-color;
   justify-content: space-evenly;
   color: $secondary-color;
-  padding: 1rem 0.4rem 0.8rem 0.4rem;
+  padding: 0.4rem;
   gap: 1rem;
+  position: sticky;
+  bottom: 0;
+  font-size: 0.8rem;
 
   .logo-col {
     display: grid;
@@ -25,7 +28,7 @@
 
   .social-links {
     list-style: none;
-    @include displayflex(row);
+    @include displayFlex(row);
     gap: 0.4rem;
     .social-icon {
       width: 1.6rem;
@@ -44,12 +47,12 @@
     gap: 0.8rem;
 
     .contacts {
-      @include displayflex(column);
+      @include displayFlex(column);
       gap: 0.4rem;
     }
   }
 
   .copyright {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }

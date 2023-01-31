@@ -4,26 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="Blogger website" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./img/favicon.png" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-
     <link rel="stylesheet" href="./dist/css/main.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
     <title>Bloggers &mdash;- Official site</title>
     <script defer src="./js/script.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".section").load("./_section.html");
-      });
-    </script>
   </head>
   <body>
     <div class="container">
@@ -33,27 +25,14 @@
         /></a>
         <nav class="nav">
           <ul class="menu-nav">
-            <li class="menu-nav__item">
-              <a class="menu-nav__link" href="#!">Home</a>
+            <li class="menu-nav-item">
+              <a class="menu-nav-link" href="#!">Home</a>
             </li>
-            <li class="menu-nav__item">
-              <a
-                class="menu-nav__link"
-                href="#!"
-                onclick="(function(){
-                alert('Dashboard');                
-            })();
-            return false;")"
-                >Dashboard</a
-              >
+            <li class="menu-nav-item">
+              <a class="menu-nav-link" href="#!">Dashboard</a>
             </li>
-            <li class="menu-nav__item">
-              <a class="menu-nav__link" href="#!"
-              onclick="(function(){
-                alert('Logout');                
-                })();
-                return false;")"
-              >Logout</a>
+            <li class="menu-nav-item">
+              <a class="menu-nav-link" href="#!">Logout</a>
             </li>
           </ul>
         </nav>
@@ -65,15 +44,23 @@
       <main class="main">
         <section class="section-profile">
           <div class="section" id="section"></div>
-          <div class="section-profile-img">
+          <div class="section-profile-popup">
             <a href="#profile-popup">
-              <img class="profile-img" src="./img/ben.jpg" alt="Profile Image" />
+              <img
+                class="profile-img"
+                src="./img/ben.jpg"
+                alt="Profile Image"
+              />
             </a>
           </div>
         </section>
         <article class="article">
-          <figure class="article__user">
-            <img class="profile-image" src="./img/julie.jpg" alt="Profile Image" />
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
             <div class="user-details">
               <span class="name">Jennifer </span>
               <span class="id">@jennifer</span>
@@ -86,8 +73,48 @@
               voluptas voluptatibus corrupti
             </p>
           </figure>
-          <figure class="article__user">
-            <img class="profile-image" src="./img/julie.jpg" alt="Profile Image" />
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
+            <div class="user-details">
+              <span class="name">Jennifer </span>
+              <span class="id">@jennifer</span>
+              <span class="date">19 Nov </span>
+            </div>
+            <p class="text-msg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur, voluptatum! Illum sit minus similique, veritatis
+              perferendis commodi alias rem, culpa laboriosam tempore magnam
+              voluptas voluptatibus corrupti
+            </p>
+          </figure>
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
+            <div class="user-details">
+              <span class="name">Jennifer </span>
+              <span class="id">@jennifer</span>
+              <span class="date">19 Nov </span>
+            </div>
+            <p class="text-msg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur, voluptatum! Illum sit minus similique, veritatis
+              perferendis commodi alias rem, culpa laboriosam tempore magnam
+              voluptas voluptatibus corrupti
+            </p>
+          </figure>
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
             <div class="user-details">
               <span class="name">Jennifer </span>
               <span class="id">@jennifer</span>
@@ -99,8 +126,12 @@
               perferendis commodi alias rem,
             </p>
           </figure>
-          <figure class="article__user">
-            <img class="profile-image" src="./img/julie.jpg" alt="Profile Image" />
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
             <div class="user-details">
               <span class="name">Jennifer </span>
               <span class="id">@jennifer</span>
@@ -111,8 +142,12 @@
               Aspernatur,
             </p>
           </figure>
-          <figure class="article__user">
-            <img class="profile-image" src="./img/julie.jpg" alt="Profile Image" />
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
             <div class="user-details">
               <span class="name">Jennifer </span>
               <span class="id">@jennifer</span>
@@ -127,8 +162,12 @@
               aliquid deserunt esse fuga totam, ex id itaque numquam similique?
             </p>
           </figure>
-          <figure class="article__user">
-            <img class="profile-image" src="./img/julie.jpg" alt="Profile Image" />
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
             <div class="user-details">
               <span class="name">Jennifer </span>
               <span class="id">@jennifer</span>
@@ -141,8 +180,12 @@
               consectetur, adipisicing elit. Itaque non molestias
             </p>
           </figure>
-          <figure class="article__user">
-            <img class="profile-image" src="./img/julie.jpg" alt="Profile Image" />
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
             <div class="user-details">
               <span class="name">Jennifer </span>
               <span class="id">@jennifer</span>
@@ -155,8 +198,12 @@
               consectetur, adipisicing elit. Itaque non molestias
             </p>
           </figure>
-          <figure class="article__user">
-            <img class="profile-image" src="./img/julie.jpg" alt="Profile Image" />
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
             <div class="user-details">
               <span class="name">Jennifer </span>
               <span class="id">@jennifer</span>
@@ -169,8 +216,12 @@
               consectetur, adipisicing elit. Itaque non molestias
             </p>
           </figure>
-          <figure class="article__user">
-            <img class="profile-image" src="./img/julie.jpg" alt="Profile Image" />
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
             <div class="user-details">
               <span class="name">Jennifer </span>
               <span class="id">@jennifer</span>
@@ -183,8 +234,12 @@
               consectetur, adipisicing elit. Itaque non molestias
             </p>
           </figure>
-          <figure class="article__user">
-            <img class="profile-image" src="./img/julie.jpg" alt="Profile Image" />
+          <figure class="article-user">
+            <img
+              class="profile-image"
+              src="./img/julie.jpg"
+              alt="Profile Image"
+            />
             <div class="user-details">
               <span class="name">Jennifer </span>
               <span class="id">@jennifer</span>
@@ -198,7 +253,7 @@
           </figure>
         </article>
         <aside class="aside">
-          <div class="aside__follow">
+          <div class="aside-follow">
             <div class="follow-heading">Who to follow</div>
             <div class="follow">
               <figure class="follow-user">
@@ -227,7 +282,7 @@
               </figure>
             </div>
           </div>
-          <div class="aside__ad">
+          <div class="aside-ad">
             <p>Advertisement:</p>
             <div class="advertisement">
               <div class="item"></div>
@@ -235,7 +290,6 @@
           </div>
         </aside>
         <div id="profile-popup" class="popup-overlay">
-          <div class="close"><a href="#">&times;</a></div>
           <div class="section"></div>
         </div>
       </main>
@@ -270,7 +324,6 @@
             </p>
           </div>
         </div>
-
         <div class="contact-col">
           <p class="footer-heading">Contact us</p>
           <p class="contacts">

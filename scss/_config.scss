@@ -10,15 +10,11 @@ $font-weight-bold: 700;
   margin: 0px;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   background-color: $primary-color;
   font-family: $font-family;
   line-height: 1rem;
-  overflow-x: hidden;
+  position: relative;
 }
 
 .main {
@@ -31,23 +27,23 @@ body {
   align-self: flex-start;
 }
 
-@mixin displayflex($direction) {
+@mixin displayFlex($direction) {
   display: flex;
   flex-direction: $direction;
 }
 
-@mixin transition-ease {
+@mixin transitionEaseInOut {
   transition: all 0.3s ease-in-out;
 }
 
-@mixin user-image($radius: 2.4rem) {
+@mixin displayUserImage($radius: 2.4rem) {
   height: $radius;
   width: $radius;
   border-radius: 50%;
   border: 3px solid #fdf2e9;
 }
 
-@mixin displayusername($isunderline: true) {
+@mixin displayUserName($isunderline: true) {
   @if $isunderline==true {
     text-decoration: underline;
   } @else {
@@ -57,7 +53,7 @@ body {
   font-size: 0.8rem;
 }
 
-@mixin lightentext() {
+@mixin displayLightenText() {
   font-weight: 400;
   font-size: 0.8rem;
   color: #999;
@@ -65,26 +61,26 @@ body {
 }
 
 /*---- Media Section ----*/
-@mixin media-lg {
+@mixin mediaLargeScreen {
   @media (max-width: 84em) {
     @content;
   }
 }
 
-@mixin media-md {
+@mixin mediaMediumScreen {
   @media (max-width: 75em) {
     @content;
   }
 }
 
-@mixin media-sm {
+@mixin mediaSmallScreen {
   @media (max-width: 59em) {
     @content;
   }
 }
 
 //Below 704px
-@mixin media-xsm {
+@mixin mediaExtraSmallScreen {
   @media (max-width: 44em) {
     @content;
   }

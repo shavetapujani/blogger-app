@@ -3,9 +3,10 @@
   background-color: white;
   box-shadow: 5px 5px 10px $header-footer-color;
   border-radius: 0.4rem;
+  align-self: start;
 
   /* Article section CSS*/
-  #{&}__user {
+  #{&}-user {
     display: grid;
     grid-template-columns: 3rem auto;
     row-gap: 0.2rem;
@@ -20,7 +21,7 @@
     }
 
     .profile-image {
-      @include user-image(2.8rem);
+      @include displayUserImage(2.8rem);
       grid-row: 1/3;
       transition: all 0.3;
       &:hover {
@@ -29,15 +30,15 @@
     }
 
     .name {
-      @include displayusername(false);
+      @include displayUserName(false);
     }
 
     .id {
-      @include lightentext;
+      @include displayLightenText;
     }
 
     .date {
-      @include lightentext;
+      @include displayLightenText;
     }
   }
 

@@ -8,19 +8,19 @@
     border-radius: 0.4rem;
   }
 
-  .section-profile-img {
+  #{&}-popup {
     align-items: center;
     display: none;
     .profile-img {
       display: none;
-      @include user-image(2.4rem);
+      @include displayUserImage(2.4rem);
     }
   }
 }
 .section-profile,
 .popup-overlay {
   .section {
-    @include displayflex(column);
+    @include displayFlex(column);
     position: relative;
 
     .profile-name {
@@ -35,9 +35,9 @@
         padding-top: 2.4rem;
       }
     }
-    .section__tweet {
+    .section-tweet {
       img {
-        @include user-image(4.8rem);
+        @include displayUserImage(4.8rem);
         position: absolute;
         top: 50%;
         left: 0;
@@ -52,7 +52,7 @@
         padding-left: 36%;
       }
       .name {
-        @include displayusername;
+        @include displayUserName;
         padding-top: 0.4rem;
         transition: all 0.3s;
       }
@@ -63,10 +63,10 @@
       }
 
       .id {
-        @include lightentext;
+        @include displayLightenText;
       }
 
-      .tweet__details {
+      .tweet-details {
         padding: 2rem 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -91,6 +91,9 @@
         }
       }
     }
+    ion-icon.profile-close-icon {
+      display: none;
+    }
   }
 }
 .popup-overlay {
@@ -103,28 +106,22 @@
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
-  @include displayflex(row);
+  @include displayFlex(row);
   align-items: center;
   justify-content: center;
 
   .section {
     background-color: #fff;
     height: 14rem;
-  }
-  .close {
-    position: absolute;
-    top: 4rem;
-    right: 4rem;
-    transition: all 200ms;
-    a {
-      font-size: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      color: #fff;
 
-      &:hover {
-        color: #159fdf;
-      }
+    ion-icon.profile-close-icon {
+      display: inline-block;
+      position: absolute;
+      top: 0.4rem;
+      right: 0.4rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      color: #fff;
     }
   }
 }

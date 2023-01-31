@@ -5,7 +5,7 @@
   top: 0;
   z-index: 1;
 
-  @include displayflex(row);
+  @include displayFlex(row);
   gap: 1rem;
   align-items: center;
 
@@ -46,17 +46,17 @@
     width: 100%;
 
     .menu-nav {
-      @include displayflex(row);
+      @include displayFlex(row);
       align-items: center;
       justify-content: center;
       gap: 1rem;
 
-      &__item {
+      &-item {
         background-color: $secondary-color;
         display: inline-block;
         padding: 0.4rem 1.2rem;
         border-radius: 0.4rem;
-        @include transition-ease;
+        @include transitionEaseInOut;
 
         &:hover,
         &:active {
@@ -70,7 +70,7 @@
         }
       }
 
-      &__link:link {
+      &-link:link {
         text-decoration: none;
         color: #101010;
         font-family: $font-family;
